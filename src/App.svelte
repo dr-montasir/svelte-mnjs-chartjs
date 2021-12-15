@@ -108,6 +108,18 @@
   <h3>Links:</h3>
   <ul>
     <li>
+      <b>GitHub</b>:<br />
+      <a
+        href="https://github.com/dr-montasir/svelte-mnjs-chartjs"
+        target="_blank"
+      >
+        https://github.com/dr-montasir/svelte-mnjs-chartjs
+      </a>
+    </li>
+
+    <br />
+
+    <li>
       <b>MNJS</b>:<br />
       <a href="https://www.npmjs.com/package/mnjs" target="_blank">
         https://www.npmjs.com/package/mnjs
