@@ -1,9 +1,7 @@
 <script>
   import mnjs from 'mnjs';
 
-  import Line from 'svelte-chartjs/src/Line.svelte';
-  import Bar from 'svelte-chartjs/src/Bar.svelte';
-  import Radar from 'svelte-chartjs/src/Radar.svelte';
+  import { Line, Bar, Radar } from 'svelte-chartjs';
 
   // 2D Rotation Matrix
   const ROTATION_MATRIX_2D = mnjs.range(0, 360, 15);
