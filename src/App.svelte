@@ -6,10 +6,11 @@
   const ROTATION_MATRIX_2D = mnjs.range(0, 360, 15);
 
   // Color Manipulation
-  const randomRedColor = mnjs.rib(0, 204),
-    randomGreenColor = mnjs.rib(0, 100),
-    randomBlueColor = mnjs.rib(0, 240),
-    randomOpacity = mnjs.divi(mnjs.rib(1, 8), 10);
+  const r = mnjs.rib(0, 204),
+    g = mnjs.rib(0, 100),
+    b = mnjs.rib(0, 240),
+    o = mnjs.divi(mnjs.rib(1, 8), 10),
+    randomColor = `rgb(${r}, ${g}, ${b}, ${o})`;
 
   // Adjust Point Radius
   const pointRadius = mnjs.rib(4, 11);
@@ -21,9 +22,7 @@
       {
         label: '# The sin of 2D Rotation Matrix',
         data: mnjs.sin.deg(ROTATION_MATRIX_2D),
-        backgroundColor: [
-          `rgba(${randomRedColor}, ${randomGreenColor}, ${randomBlueColor}, ${randomOpacity})`,
-        ],
+        backgroundColor: [randomColor],
         borderColor: ['rgba(27, 89, 161, 1)'],
         borderWidth: 2,
         pointRadius: `${pointRadius}`,
@@ -88,12 +87,10 @@
 <div class="chart">
   <h3>Random Values</h3>
   <div
-    style="background-color: rgb({randomRedColor}, {randomGreenColor}, {randomBlueColor}, {randomOpacity}); padding: 10px; text-align: center"
+    style="background-color: {randomColor}; padding: 10px; text-align: center"
   >
     <p>
-      <b
-        >Color : rgb({randomRedColor}, {randomGreenColor}, {randomBlueColor}, {randomOpacity})</b
-      >
+      <b>Color : {randomColor}</b>
     </p>
     <p>
       <b>Point Radius : {pointRadius} px</b>
